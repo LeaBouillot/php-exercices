@@ -1,0 +1,4 @@
+<!-- creation db PDO -->
+<?php
+
+?>
