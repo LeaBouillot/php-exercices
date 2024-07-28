@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>php form</title>
+  </head>
+  <body>
+    <!-- PHP $_GET, $_POST -->
+    <form
+      method="post"
+      action="index.php"
+      name="form1"
+    >
+      Title: <input type="text" name="subject" /><br />
+      Password: <input type="password" name="password" /><br />
+      Content:
+      <textarea name="content" rows="5" cols="30" id="content"></textarea><br />
+
+      <button type="button" id="btn">Envoyer</button>
+
+      <script>
+        const btn = document.getElementById("btn");
+        btn.addEventListener("click", function () {
+          f = document.form1;
+          if (f.subject.value == "") {
+            alert("Veuillez remplir tous les champs");
+            f.subject.focus();
+            return;
+          }
+          document.form1.submit();
+        });
+      </script>
+    </form>
+  </body>
+</html>
+
+<!-- name: <input type="text" name="name" /><br />
+      company: <input type="text" name="company" /><br />
+      email: <input type="email" name="email" /><br /> -->

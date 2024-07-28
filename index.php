@@ -1,34 +1,20 @@
-<?php
-// phpinfo(); //verifier pod install : cmd f : pod
-// exit;
-//MySQL PDO
-//connecter DB 
-$servername = "localhost";
-$username = "root";
-$password = "";
-//3 façons pr connect DB
-// $conn = new mysqli($servername,$username,$password);
-// $conn = mysqli_connect($servername,$username,$password);
-//PDO EXTENTION
+<!-- <?php
+print_r($_POST);
+?> -->
+Titre: <?php echo nl2br($_POST['subject']); ?><br>
+Password: <?php echo nl2br($_POST['password']); ?><br>
+Content: <?php echo nl2br($_POST['content']); ?><br>
 
-try {
-    $conn = new PDO("mysql:host=$servername", $username, $password);
-    $conn->SetAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //error msg
-  
-    echo "<p>Connected successfully.</p>";
-} catch (PDOException $e) {
-    echo $e->getMessage();
-    exit;
-}
+<!-- // print_r($_GET); //metho="get" //recherche
 
-try {
-// $sql = "CREATE DATABASE firstdb1";
-$sql = "DROP DATABASE firstdb1";
+// $name = $_POST['name'];
+// $email = $_POST['email'];
 
-$conn ->exec($sql); // SQL statement executed
-echo "DELETE FROM firstdb1";
-// echo "firstdb created successfully";
-} catch (PDOException $e) {
-    echo $e->getMessage();
-}
-$conn = null;
+// $sql = "INSERT INTO menber(name,email) values('{$name}','{$email}')";
+// myqsli_query($sql);
+
+//SQL
+//INSERT INTO : log in
+//UPDATE : modification
+//DELETE -->
+
